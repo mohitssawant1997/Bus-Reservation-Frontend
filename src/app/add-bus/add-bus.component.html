@@ -1,0 +1,40 @@
+<div class="container-fluid" style="text-align: center;">
+    <h1>Add Bus</h1>
+   <div *ngIf="showMsg">
+       <h3 class="alert alert-success" *ngIf="success">Bus Details Added successfully</h3>
+       <h3 class="alert alert-danger" *ngIf="!success">Error in adding bus details!!</h3>
+   </div>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Bus Name </label>
+        <input type="text" class="form-control" [(ngModel)]="bus.bus_Name" name="bus_Name">
+      </div>
+  
+      <div class="form-group">
+        <label>Bus Number </label>
+        <input type="text" class="form-control" [(ngModel)]="bus.bus_Number" name="bus_Number">
+      </div>
+  
+      <div class="form-group">
+        <label>Bus Type </label>
+        <input type="text" class="form-control" [(ngModel)]="bus.bus_type" name="bus_type">
+      </div>
+
+      <div class="form-group">
+        <label>Source </label>
+        <input type="text" class="form-control" [(ngModel)]="bus.source" name="source">
+      </div>
+  
+      <div class="form-group">
+        <label>Destination </label>
+        <input type="text" class="form-control" [(ngModel)]="bus.destination" name="destination">
+      </div>
+  
+      <div class="form-group">
+        <label>Total Seats </label>
+        <input type="number" class="form-control" [(ngModel)]="bus.total_seats" name="total_seats">
+      </div>
+
+      <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+</div>
