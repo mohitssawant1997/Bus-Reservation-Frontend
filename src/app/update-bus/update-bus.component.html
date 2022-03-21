@@ -1,0 +1,35 @@
+<div class="container-fluid" style="text-align: center;">
+    <h1>Update Bus</h1>
+   <div *ngIf="showMsg">
+       <h3 class="alert alert-success" *ngIf="success">Bus Details Updated successfully</h3>
+       <h3 class="alert alert-danger" *ngIf="!success">The Entered Bus Id is wrong!!</h3>
+   </div>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <div class="form-group">
+            <label>Bus Id</label>
+            <input type="number" class="form-control" [(ngModel)]="bus.bus_Id" name="bus_Id">
+          </div>
+
+        <label>Bus Name </label>
+        <input type="text" class="form-control" [(ngModel)]="bus.bus_Name" name="bus_Name">
+      </div>
+  
+      <div class="form-group">
+        <label>Bus Number </label>
+        <input type="text" class="form-control" [(ngModel)]="bus.bus_Number" name="bus_Number">
+      </div>
+  
+      <div class="form-group">
+        <label>Bus Type </label>
+        <input type="text" class="form-control" [(ngModel)]="bus.bus_type" name="bus_type">
+      </div>
+  
+      <div class="form-group">
+        <label>Total Seats </label>
+        <input type="number" class="form-control" [(ngModel)]="bus.total_seats" name="total_seats">
+      </div>
+
+      <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+</div>

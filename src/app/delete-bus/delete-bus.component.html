@@ -1,0 +1,15 @@
+<div class="container-fluid" style="text-align: center;">
+    <h1>Update Route</h1>
+   <div *ngIf="showMsg">
+       <h3 class="alert alert-success" *ngIf="success">Bus Deletion Successful</h3>
+       <h3 class="alert alert-danger" *ngIf="!success">The Entered Bus Id is wrong!!</h3>
+   </div>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Bus Id </label>
+        <input type="number" class="form-control" [(ngModel)]="bus.bus_Id" name="bus_Id">
+      </div>
+  
+      <button class="btn btn-primary" type="submit">Delete</button>
+    </form>
+</div>
